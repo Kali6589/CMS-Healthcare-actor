@@ -1,0 +1,74 @@
+{
+  "actorInputSchemaVersion": 1,
+  "title": "CMS Healthcare Data Lookup",
+  "description": "Look up Medicare fee schedules, denial codes, and NPI providers.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "lookupType": {
+      "title": "Lookup Type",
+      "type": "string",
+      "description": "What type of healthcare data to look up",
+      "editor": "select",
+      "default": "fee_schedule",
+      "enum": ["fee_schedule", "denial_codes", "npi_lookup"],
+      "enumTitles": ["Medicare Fee Schedule (CPT code rates)", "Denial Code Lookup (CARC/RARC)", "NPI Provider Registry"]
+    },
+    "cptCodes": {
+      "title": "CPT Code(s)",
+      "type": "string",
+      "description": "One or more CPT codes comma separated. Example: 99213, 99214",
+      "editor": "textfield",
+      "default": "99213"
+    },
+    "state": {
+      "title": "State",
+      "type": "string",
+      "description": "Two-letter US state code",
+      "editor": "textfield",
+      "default": "CA"
+    },
+    "year": {
+      "title": "Fee Schedule Year",
+      "type": "string",
+      "editor": "select",
+      "default": "2025",
+      "enum": ["2025", "2024", "2023"],
+      "enumTitles": ["2025", "2024", "2023"]
+    },
+    "codes": {
+      "title": "Denial Code(s)",
+      "type": "string",
+      "description": "CARC or RARC codes comma separated. Example: 97, 96, 29",
+      "editor": "textfield",
+      "default": "97"
+    },
+    "codeType": {
+      "title": "Denial Code Type",
+      "type": "string",
+      "editor": "select",
+      "default": "CARC",
+      "enum": ["CARC", "RARC"],
+      "enumTitles": ["CARC - Claim Adjustment Reason Code", "RARC - Remittance Advice Remark Code"]
+    },
+    "npiNumber": {
+      "title": "NPI Number",
+      "type": "string",
+      "description": "10-digit NPI number",
+      "editor": "textfield"
+    },
+    "providerName": {
+      "title": "Provider Name",
+      "type": "string",
+      "description": "Provider first and last name or organization name",
+      "editor": "textfield"
+    },
+    "specialty": {
+      "title": "Specialty",
+      "type": "string",
+      "description": "Provider specialty",
+      "editor": "textfield"
+    }
+  },
+  "required": ["lookupType"]
+}
