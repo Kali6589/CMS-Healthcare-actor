@@ -16,28 +16,29 @@
         "npi_lookup"
       ],
       "enumTitles": [
-        "Medicare Fee Schedule (CPT code rates)",
-        "Denial Code Lookup (CARC/RARC)",
+        "Medicare Fee Schedule",
+        "Denial Code Lookup",
         "NPI Provider Registry"
       ]
     },
     "cptCodes": {
       "title": "CPT Code(s)",
       "type": "string",
-      "description": "One or more CPT codes comma separated. Example: 99213, 99214",
+      "description": "One or more CPT codes comma separated. Example: 99213",
       "editor": "textfield",
       "default": "99213"
     },
     "state": {
       "title": "State",
       "type": "string",
-      "description": "Two-letter US state code",
+      "description": "Two-letter US state code. Example: CA, TX, NY",
       "editor": "textfield",
       "default": "CA"
     },
     "year": {
       "title": "Fee Schedule Year",
       "type": "string",
+      "description": "Which CMS fee schedule year to use for reimbursement rates",
       "editor": "select",
       "default": "2025",
       "enum": [
@@ -54,13 +55,14 @@
     "codes": {
       "title": "Denial Code(s)",
       "type": "string",
-      "description": "CARC or RARC codes comma separated. Example: 97, 96, 29",
+      "description": "CARC or RARC denial codes comma separated. Example: 97, 96",
       "editor": "textfield",
       "default": "97"
     },
     "codeType": {
       "title": "Denial Code Type",
       "type": "string",
+      "description": "CARC is Claim Adjustment Reason Code, RARC is Remittance Advice Remark Code",
       "editor": "select",
       "default": "CARC",
       "enum": [
@@ -75,19 +77,19 @@
     "npiNumber": {
       "title": "NPI Number",
       "type": "string",
-      "description": "10-digit NPI number",
+      "description": "10-digit National Provider Identifier number for direct lookup",
       "editor": "textfield"
     },
     "providerName": {
       "title": "Provider Name",
       "type": "string",
-      "description": "Provider first and last name or organization name",
+      "description": "Provider first and last name or organization name to search",
       "editor": "textfield"
     },
     "specialty": {
       "title": "Specialty",
       "type": "string",
-      "description": "Provider specialty",
+      "description": "Provider specialty to filter results. Example: Internal Medicine",
       "editor": "textfield"
     }
   },
