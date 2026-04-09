@@ -1,5 +1,4 @@
 {
-  "actorInputSchemaVersion": 1,
   "title": "CMS Healthcare Data Lookup",
   "description": "Look up Medicare fee schedules, denial codes, and NPI providers.",
   "type": "object",
@@ -11,8 +10,16 @@
       "description": "What type of healthcare data to look up",
       "editor": "select",
       "default": "fee_schedule",
-      "enum": ["fee_schedule", "denial_codes", "npi_lookup"],
-      "enumTitles": ["Medicare Fee Schedule (CPT code rates)", "Denial Code Lookup (CARC/RARC)", "NPI Provider Registry"]
+      "enum": [
+        "fee_schedule",
+        "denial_codes",
+        "npi_lookup"
+      ],
+      "enumTitles": [
+        "Medicare Fee Schedule (CPT code rates)",
+        "Denial Code Lookup (CARC/RARC)",
+        "NPI Provider Registry"
+      ]
     },
     "cptCodes": {
       "title": "CPT Code(s)",
@@ -33,8 +40,16 @@
       "type": "string",
       "editor": "select",
       "default": "2025",
-      "enum": ["2025", "2024", "2023"],
-      "enumTitles": ["2025", "2024", "2023"]
+      "enum": [
+        "2025",
+        "2024",
+        "2023"
+      ],
+      "enumTitles": [
+        "2025",
+        "2024",
+        "2023"
+      ]
     },
     "codes": {
       "title": "Denial Code(s)",
@@ -48,8 +63,14 @@
       "type": "string",
       "editor": "select",
       "default": "CARC",
-      "enum": ["CARC", "RARC"],
-      "enumTitles": ["CARC - Claim Adjustment Reason Code", "RARC - Remittance Advice Remark Code"]
+      "enum": [
+        "CARC",
+        "RARC"
+      ],
+      "enumTitles": [
+        "CARC - Claim Adjustment Reason Code",
+        "RARC - Remittance Advice Remark Code"
+      ]
     },
     "npiNumber": {
       "title": "NPI Number",
@@ -70,5 +91,7 @@
       "editor": "textfield"
     }
   },
-  "required": ["lookupType"]
+  "required": [
+    "lookupType"
+  ]
 }
