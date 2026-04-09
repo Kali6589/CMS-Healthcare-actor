@@ -1,0 +1,11 @@
+{
+  "actorSpecification": 1,
+  "name": "cms-healthcare-data-lookup",
+  "title": "CMS Healthcare Data — Fee Schedule, Denial Codes & NPI Lookup",
+  "description": "Look up Medicare reimbursement rates by CPT code and state, decode CARC/RARC claim denial codes, and search the NPI provider registry. Free CMS government data — no scraping, pure API.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "dockerfile": "./Dockerfile",
+  "readme": "./README.md",
+  "input": "./input_schema.json"
+}
